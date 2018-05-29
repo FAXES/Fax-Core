@@ -62,7 +62,7 @@ FiveM Server :D
 * <a class="attachment" href="http://faxes.zone/files/fax-core/1.0.rar">or Direct Download</a>
 
 **Credit**
-Credit to @X and @scam for scripting @Demonen for helping with the ped blacklist
+Credit to @Xander and @Scammer for scripting @Demonen for helping with the ped blacklist
 
 
 **Further [Support](https://discord.gg/R9Z7npM)**
