@@ -57,7 +57,7 @@ end)
 
 -- Version checker
 PerformHttpRequest("http://faxes.zone/files/fax-core/version.txt", function(err, serverVersion, headers)
-    local version = "v1.0.0"
+    local version = "v1.1.0"
     if string.find(serverVersion, version) == nil then
         Wait(120)
         print("\n")
