@@ -42,5 +42,5 @@ end)
 --- General No Perms Message
 RegisterNetEvent('Fax-Core:NoPerms')
 AddEventHandler('Fax-Core:NoPerms', function()
-    TriggerEvent("chatMessage", "SYSTEM", {255, 0, 0}, "Insignificant Permissions")
+    TriggerEvent("chatMessage", "SYSTEM", {255, 0, 0}, "Insufficient Permissions")
 end)

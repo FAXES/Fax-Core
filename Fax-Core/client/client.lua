@@ -30,7 +30,7 @@ AddEventHandler('Fax:owner', function()
 			SetPlayerModel(PlayerId(), GetHashKey(defaultpedmodel))
 			notifyped()
 		end
-		Citizen.Wait(250)
+		Citizen.Wait(100)
 	end
 end)
 
@@ -57,7 +57,7 @@ AddEventHandler('Fax:sadmin', function()
 			SetPlayerModel(PlayerId(), GetHashKey(defaultpedmodel))
 			notifyped()
 		end
-		Citizen.Wait(250)
+		Citizen.Wait(100)
 	end
 end)
 
@@ -84,7 +84,7 @@ AddEventHandler('Fax:fadmin', function()
 			SetPlayerModel(PlayerId(), GetHashKey(defaultpedmodel))
 			notifyped()
 		end
-		Citizen.Wait(250)
+		Citizen.Wait(100)
 	end
 end)
 
@@ -111,7 +111,7 @@ AddEventHandler('Fax:member3', function()
 			SetPlayerModel(PlayerId(), GetHashKey(defaultpedmodel))
 			notifyped()
 		end
-		Citizen.Wait(250)
+		Citizen.Wait(100)
 	end
 end)
 
@@ -138,7 +138,7 @@ AddEventHandler('Fax:member2', function()
 			SetPlayerModel(PlayerId(), GetHashKey(defaultpedmodel))
 			notifyped()
 		end
-		Citizen.Wait(250)
+		Citizen.Wait(100)
 	end
 end)
 
@@ -165,7 +165,7 @@ AddEventHandler('Fax:member1', function()
 			SetPlayerModel(PlayerId(), GetHashKey(defaultpedmodel))
 			notifyped()
 		end
-		Citizen.Wait(250)
+		Citizen.Wait(100)
 	end
 end)
 
@@ -192,7 +192,7 @@ AddEventHandler('Fax:guest', function()
 			SetPlayerModel(PlayerId(), GetHashKey(defaultpedmodel))
 			notifyped()
 		end
-		Citizen.Wait(250)
+		Citizen.Wait(100)
 	end
 end)
 
