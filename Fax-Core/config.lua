@@ -149,11 +149,11 @@ guestpedblacklist = {
 ]]
 -- Blacklist Messages
 	-- Message for vehicles
-carblacklistMessage = "~r~This Vehicle is Blacklisted For Your Group"
+carblacklistMessage = "~r~This vehicle is blacklisted for your group."
 	-- Message for weapons
-gunblacklistMessage = "~r~This Weapon is Blacklisted For Your Group"
+gunblacklistMessage = "~r~This weapon is blacklisted for your group.
 	-- Message for Peds
-pedblacklistMessage = "~r~This Player Model is Blacklisted For Your Group"
+pedblacklistMessage = "~r~This player model is blacklisted for your group."
 
 --[[
 Links for lists of vehicles, peds and weapons:
