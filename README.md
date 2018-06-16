@@ -21,14 +21,14 @@ With Fax Core you have 3 administration and 4 user ranks, each with their own se
 - Lots of documentation, so don't ask if you have not read ;)
 - Made with :heart: and :mascot:
 
-[details="In the Download"]
-  > __resource.lua
-  client.lua
-  client-messages.lua
-  config.lua
-  functions.lua
-  perms.cfg
-  server.lua
+**In the download:**
+- __resource.lua
+- client.lua
+- client-messages.lua
+- config.lua
+- functions.lua
+- perms.cfg
+- server.lua
 
 <hr>
 
