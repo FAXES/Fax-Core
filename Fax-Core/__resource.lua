@@ -9,14 +9,12 @@
 ]]
 resource_manifest_version "44febabe-d386-4d18-afbe-5e627f4af937"
 
-client_scripts {
-	"config.lua",
-	"client/client-messages.lua",
-	"client/client.lua",
-	"client/functions.lua"
-}
-
+server_script "config.lua"
 server_script "server/server.lua"
+
+client_script "config.lua"
+client_script "client/functions.lua"
+client_script "client/client.lua"
 
 -- Credit list:
 -- Script Help : Xander, Scammer
