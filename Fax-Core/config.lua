@@ -12,148 +12,136 @@
 ]]
 
 --[[
+	DO NOT TOUCH THIS FUNCTION
+]]
+
+---------------------------------------------------------------------------
+-- EDIT BELOW THIS BLOCK DO NOT EDIT ABOVE FUNCTION
+---------------------------------------------------------------------------
+
+--[[
+	ACE RANKS
+	Highest to Lowest
+]]
+AceRanks = {
+	{rank = "owner", label = "Owner"},
+	{rank = "sadmin", label = "Senior Admin"},
+	{rank = "admin", label = "Admin"},
+	{rank = "m3", label = "Member 3"},
+	{rank = "m2", label = "Member 2"},
+	{rank = "m1", label = "Member 1"},
+	{rank = "guest", label = "Guest"}
+}
+
+--[[
 	VEHICLE SECTION
 ]]
--- Blacklisted vehicle models for owners
-ownercarblacklist = {
-	'POLICE'
+VehicleBlacklist = {
+	["owner"] = {
+		'POLICE'
+	},
+	["sadmin"] = {
+		'POLICE2'
+	},
+	["admin"] = {
+		'POLICE3'
+	},
+	["m3"] = {
+		'SHERIFF'
+	},
+	["m2"] = {
+		'SHERIFF2'
+	},
+	["m1"] = {
+		'FBI'
+	},
+	["guest"] = {
+		'POLICE4',
+		'RHINO',
+		'BUZZARD',
+		'CARGOBOB',
+		'CARGOBOB2',
+		'CARGOBOB3',
+		'CARGOPLANE',
+		'freight',
+		'FREIGHT',
+		'SHAMAL'
+	}
 }
 
--- Blacklisted vehicle models for Senior Admins
-sadmincarblacklist = {
-	'POLICE2'
-}
-
--- Blacklisted vehicle models for Admins
-admincarblacklist = {
-	'POLICE3'
-}
-
--- Blacklisted vehicle models for Member 3
-m3carblacklist = {
-	'SHERIFF'
-}
-
--- Blacklisted vehicle models for Member 2
-m2carblacklist = {
-	'SHERIFF2'
-}
-
--- Blacklisted vehicle models for Member 1
-m1carblacklist = {
-	'FBI'
-}
-
--- Blacklisted vehicle models for Guest
-guestcarblacklist = {
-	'POLICE4',
-	'RHINO',
-	'BUZZARD',
-	'CARGOBOB',
-	'CARGOBOB2',
-	'CARGOBOB3',
-	'CARGOPLANE',
-	'freight',
-	'FREIGHT',
-	'SHAMAL'
-}
 --[[
 	WEAPON SECTION
 ]]
 -- Blacklisted weapon models for Owners
-ownerweaponblacklist = {
-	"WEAPON_GRENADELAUNCHER",
-	"WEAPON_STUNGUN"
-}
-
--- Blacklisted weapon models for Senior Admins
-sadminweaponblacklist = {
-	"WEAPON_SNSPISTOL",
-	"WEAPON_STUNGUN"
-}
-
--- Blacklisted weapon models for Admins
-adminweaponblacklist = {
-	"WEAPON_MOLOTOV",
-	"WEAPON_STUNGUN"
-}
-
--- Blacklisted weapon models for Member 3
-m3weaponblacklist = {
-	"WEAPON_PUMPSHOTGUN",
-	"WEAPON_STUNGUN"
-}
-
--- Blacklisted weapon models for Member 2
-m2weaponblacklist = {
-	"WEAPON_ASSAULTRIFLE",
-	"WEAPON_STUNGUN"
-}
-
--- Blacklisted weapon models for Member 1
-m1weaponblacklist = {
-	"WEAPON_BAT",
-	"WEAPON_STUNGUN"
-}
-
--- Blacklisted weapon models for Guest
-guestweaponblacklist = {
-	"WEAPON_MINIGUN",
-	"WEAPON_STUNGUN"
+WeaponBlacklist = {
+	["owner"] = {
+		"WEAPON_GRENADELAUNCHER",
+		"WEAPON_STUNGUN"
+	},
+	["sadmin"] = {
+		"WEAPON_SNSPISTOL",
+		"WEAPON_STUNGUN"
+	},
+	["admin"] = {
+		"WEAPON_MOLOTOV",
+		"WEAPON_STUNGUN"
+	},
+	["m3"] = {
+		"WEAPON_PUMPSHOTGUN",
+		"WEAPON_STUNGUN"
+	},
+	["m2"] = {
+		"WEAPON_ASSAULTRIFLE",
+		"WEAPON_STUNGUN"
+	},
+	["m1"] = {
+		"WEAPON_BAT",
+		"WEAPON_STUNGUN"
+	},
+	["guest"] = {
+		"WEAPON_MINIGUN",
+		"WEAPON_STUNGUN"
+	}
 }
 
 --[[
 	PED MODEL SECTION
 ]]
--- switches back to the below ped when a user is in a blacklisted one.
-defaultpedmodel = "a_m_y_skater_01"
-
--- Blacklisted ped models for Owners
-ownerpedblacklist = {
-	"S_M_Y_ArmyMech_01"
-}
-
--- Blacklisted ped models for Senior Admins
-sadminpedblacklist = {
-	"S_M_M_Marine_02 "
-}
-
--- Blacklisted ped models for Admins
-adminpedblacklist = {
-	"CSB_BallasOG"
-}
-
-
--- Blacklisted ped models for Member 3
-m3pedblacklist = {
-	"CSB_BallasOG"
-}
-
--- Blacklisted ped models for Member 2
-m2pedblacklist = {
-	"CSB_BallasOG"
-}
-
--- Blacklisted ped models for Member 1
-m1pedblacklist = {
-	"CSB_BallasOG"
-}
-
--- Blacklisted ped models for Guest
-guestpedblacklist = {
-	"CSB_BallasOG"
+PedBlacklist = {
+	defaultpedmodel = "a_m_y_skater_01", -- switches back to the below ped when a user is in a blacklisted one.
+	ranks = {
+		["owner"] = {
+			"S_M_Y_ArmyMech_01"
+		},
+		["sadmin"] = {
+			"S_M_M_Marine_02 "
+		},
+		["admin"] = {
+			"CSB_BallasOG"
+		},
+		["m3"] = {
+			"CSB_BallasOG"
+		},
+		["m2"] = {
+			"CSB_BallasOG"
+		},
+		["m1"] = {
+			"CSB_BallasOG"
+		},
+		["guest"] = {
+			"CSB_BallasOG"
+		}
+	}
 }
 
 --[[
 	MESSAGES SECTION
 ]]
--- Blacklist Messages
-	-- Message for vehicles
-carblacklistMessage = "~r~This Vehicle is Blacklisted For Your Group"
-	-- Message for weapons
-gunblacklistMessage = "~r~This Weapon is Blacklisted For Your Group"
-	-- Message for Peds
-pedblacklistMessage = "~r~This Player Model is Blacklisted For Your Group"
+Messages = {
+	vehicle = "~r~This Vehicle is Blacklisted For Your Group",
+	weapon = "~r~This Weapon is Blacklisted For Your Group",
+	ped = "~r~This Player Model is Blacklisted For Your Group"
+}
 
 --[[
 Links for lists of vehicles, peds and weapons:
@@ -164,3 +152,4 @@ Weapon Models: https://wiki.fivem.net/wiki/Weapons
 
 Make sure all are uppercase when placing them in this file.
 ]]
+	
