@@ -36,13 +36,13 @@ With Fax Core you have 3 administration and 4 user ranks, each with their own se
 
 Name | Ace Name | Perm Level Number
 --- | --- | ---
-Owner | Fax.owner | 1
-Senior Admin | Fax.snradmin | 2
-Admin | Fax.fadmin | 3
-Member 3 | Fax.member3 | 4
-Member 2 | Fax.member2 | 5
-Member 1 | Fax.member1 | 6
-Guest | N/A | 7
+Owner | Fax.owner | 6
+Senior Admin | Fax.snradmin | 5
+Admin | Fax.fadmin | 4
+Member 3 | Fax.member3 | 3
+Member 2 | Fax.member2 | 2
+Member 1 | Fax.member1 | 1
+Guest | N/A | 0
 
 <small>Guest does not have an ace, the script auto assigns it is no ace is specified for a client</small>
 
