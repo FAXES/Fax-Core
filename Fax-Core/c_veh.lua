@@ -16,24 +16,24 @@ end
 
 -- Manage Restricted Vehicles
 function ManageRestrictVehicles()
-	local Faxped = PlayerPedId()
+	local ped = PlayerPedId()
 	local veh = nil
 
-	if IsPedInAnyVehicle(Faxped, false) then
-		veh = GetVehiclePedIsUsing(Faxped)
+	if IsPedInAnyVehicle(ped, false) then
+		veh = GetVehiclePedIsUsing(ped)
 	else
-		veh = GetVehiclePedIsTryingToEnter(Faxped)
+		veh = GetVehiclePedIsTryingToEnter(ped)
 	end
 	
 	if veh and DoesEntityExist(veh) then
 		local model = GetEntityModel(veh)
 		local driver = GetPedInVehicleSeat(veh, -1)
-		if driver == Faxped then
+		if driver == ped then
 			
 			if curAuthLvlRank < authLvlRank["Admin"] and plteam ~= "Team-Admin" then
 				if isStaffVeh(veh) then
 					ShowInfo("~r~Restricted Vehicle Model.")
-					ClearPedTasksImmediately(Faxped)
+					ClearPedTasksImmediately(ped)
 				end
 			end
 
@@ -42,8 +42,8 @@ function ManageRestrictVehicles()
 					local rmodel1 = GetHashKey(restrictedVehsGen[i])
 					if (model == rmodel1) or (GetVehicleClass(veh) == 19) then -- Military
 						ShowInfo("~r~Restricted Vehicle Model.")
-						DeleteE(veh)
-						ClearPedTasksImmediately(Faxped)
+						DeleteEntity(veh)
+						ClearPedTasksImmediately(ped)
 					end
 				end
 			end	
@@ -53,7 +53,7 @@ function ManageRestrictVehicles()
 					local rmodel2 = GetHashKey(restrictedVehsSnrAdmin[i])
 					if model == rmodel2 then
 						ShowInfo("~r~Restricted Vehicle Model.")
-						ClearPedTasksImmediately(Faxped)
+						ClearPedTasksImmediately(ped)
 					end
 				end
 			end
@@ -63,7 +63,7 @@ function ManageRestrictVehicles()
 					local rmodel2 = GetHashKey(restrictedVehsAdmin[i])
 					if model == rmodel2 then
 						ShowInfo("~r~Restricted Vehicle Model.")
-						ClearPedTasksImmediately(Faxped)
+						ClearPedTasksImmediately(ped)
 					end
 				end
 			end
@@ -73,7 +73,7 @@ function ManageRestrictVehicles()
 					local rmodel3 = GetHashKey(restrictedVehsM3[i])
 					if model == rmodel3 then
 						ShowInfo("~r~Restricted Vehicle Model.")
-						ClearPedTasksImmediately(Faxped)
+						ClearPedTasksImmediately(ped)
 					end
 				end
 			end
@@ -83,7 +83,7 @@ function ManageRestrictVehicles()
 					local rmodel4 = GetHashKey(restrictedVehsM2[i])
 					if model == rmodel4 then
 						ShowInfo("~r~Restricted Vehicle Model.")
-						ClearPedTasksImmediately(Faxped)	
+						ClearPedTasksImmediately(ped)	
 					end
 				end
 			end
@@ -91,11 +91,11 @@ function ManageRestrictVehicles()
 			if curAuthLvlRank < authLvlRank["M1"] then 
 				if GetVehicleClass(veh) == 7 then -- Motorbikes 
 					ShowInfo("~r~Restricted Vehicle Model.")
-					ClearPedTasksImmediately(Faxped)
+					ClearPedTasksImmediately(ped)
 				end
 				if GetVehicleClass(veh) == 15 or GetVehicleClass(veh) == 16 then -- Planes / Heli's
 					ShowInfo("~r~Restricted Vehicle Model.")
-					ClearPedTasksImmediately(Faxped)
+					ClearPedTasksImmediately(ped)
 				end	
 			end		
 		end
