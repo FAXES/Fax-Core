@@ -30,179 +30,27 @@ authLvlRank =
 }
 
 ---- Triggering Perms ----
--- Owner Vehicle Permission Check
-RegisterNetEvent('Fax:owner')
-AddEventHandler('Fax:owner', function()
+Citizen.CreateThread(function()
 	while true do
 
-		local Faxplayer = PlayerId()
-		local Faxped = PlayerPedId()
-		if DoesEntityExist(Faxped) and not IsEntityDead(Faxped) then
-		curAuthLvlRank = authLvlRank["Owner"]
-
-		ManageRestrictVehicles()
-		ManageRestrictWeaps()
-		ManageRestrictPeds()
+		local ped = PlayerPedId()
+		if DoesEntityExist(ped) and not IsEntityDead(ped) then
+			ManageRestrictVehicles()
+			ManageRestrictWeaps()
+			ManageRestrictPeds()
 		end
 		Citizen.Wait(500)
 	end
 end)
 
--- Senior Admin Vehicle Permission Check
-RegisterNetEvent('Fax:sadmin')
-AddEventHandler('Fax:sadmin', function() 
-	while true do
-
-		local Faxplayer = PlayerId()
-		local Faxped = GetPlayerPed(-1)
-		if DoesEntityExist(Faxped) and not IsEntityDead(Faxped) then
-		curAuthLvlRank = authLvlRank["Sadmin"]
-
-		ManageRestrictVehicles()
-		ManageRestrictWeaps()
-		ManageRestrictPeds()
-		end
-		Citizen.Wait(500)
-	end
+RegisterNetEvent("setPlayerGroup")
+AddEventHandler("setPlayerGroup", function(group)
+	curAuthLvlRank = authLvlRank[group]
 end)
 
--- Admin Vehicle Permission Check
-RegisterNetEvent('Fax:fadmin')
-AddEventHandler('Fax:fadmin', function() 
-	while true do
-
-		local Faxplayer = PlayerId()
-		local Faxped = GetPlayerPed(-1)
-		if DoesEntityExist(Faxped) and not IsEntityDead(Faxped) then
-		curAuthLvlRank = authLvlRank["Admin"]
-
-		ManageRestrictVehicles()
-		ManageRestrictWeaps()
-		ManageRestrictPeds()
-		end
-		Citizen.Wait(500)
-	end
-end)
-
--- Member 3 Vehicle Permission Check
-RegisterNetEvent('Fax:member3')
-AddEventHandler('Fax:member3', function() 
-	while true do
-
-		local Faxplayer = PlayerId()
-		local Faxped = GetPlayerPed(-1)
-		if DoesEntityExist(Faxped) and not IsEntityDead(Faxped) then
-		curAuthLvlRank = authLvlRank["M3"]
-
-		ManageRestrictVehicles()
-		ManageRestrictWeaps()
-		ManageRestrictPeds()
-		end
-		Citizen.Wait(500)
-	end
-end)
-
--- Member 2 Vehicle Permission Check
-RegisterNetEvent('Fax:member2')
-AddEventHandler('Fax:member2', function() 
-	while true do
-
-		local Faxplayer = PlayerId()
-		local Faxped = GetPlayerPed(-1)
-		if DoesEntityExist(Faxped) and not IsEntityDead(Faxped) then
-		curAuthLvlRank = authLvlRank["M2"]
-
-		ManageRestrictVehicles()
-		ManageRestrictWeaps()
-		ManageRestrictPeds()
-		end
-		Citizen.Wait(500)
-	end
-end)
-
--- Member 2 Vehicle Permission Check
-RegisterNetEvent('Fax:member1')
-AddEventHandler('Fax:member1', function() 
-	while true do
-
-		local Faxplayer = PlayerId()
-		local Faxped = GetPlayerPed(-1)
-		if DoesEntityExist(Faxped) and not IsEntityDead(Faxped) then
-		curAuthLvlRank = authLvlRank["M1"]
-
-		ManageRestrictVehicles()
-		ManageRestrictWeaps()
-		ManageRestrictPeds()
-		end
-		Citizen.Wait(500)
-	end
-end)
-
--- Guest Vehicle Permission Check
-RegisterNetEvent('Fax:guest')
-AddEventHandler('Fax:guest', function()
-	while true do
-
-		local Faxplayer = PlayerId()
-		local Faxped = GetPlayerPed(-1)
-		if DoesEntityExist(Faxped) and not IsEntityDead(Faxped) then
-		curAuthLvlRank = authLvlRank["Guest"]
-
-		ManageRestrictVehicles()
-		ManageRestrictWeaps()
-		ManageRestrictPeds()
-		end
-		Citizen.Wait(500)
-	end
-end)
-
----- Setting join messages ----
-RegisterNetEvent('Fax:ownerMessage')
-AddEventHandler('Fax:ownerMessage', function()
-	Wait(5000)
-	ShowInfo('~y~Permission System ~n~~w~Your permission level is: Owner')
-end)
--- Sends senior admin checked message
-RegisterNetEvent('Fax:sadminMessage')
-AddEventHandler('Fax:sadminMessage', function()
-	Wait(5000)
-	ShowInfo('~y~Permission System ~n~~w~Your permission level is: Senior Admin')
-end)
--- Sends admin checked message
-RegisterNetEvent('Fax:fadminMessage')
-AddEventHandler('Fax:fadminMessage', function()
-	Wait(5000)
-	ShowInfo('~y~Permission System ~n~~w~Your permission level is: Admin')
-end)
--- Sends member 3 checked message
-RegisterNetEvent('Fax:m3Message')
-AddEventHandler('Fax:m3Message', function()
-	Wait(5000)
-	ShowInfo('~y~Permission System ~n~~w~Your permission level is: Member 3')
-end)
--- Sends member 2 checked message
-RegisterNetEvent('Fax:m2Message')
-AddEventHandler('Fax:m2Message', function()
-	Wait(5000)
-	ShowInfo('~y~Permission System ~n~~w~Your permission level is: Member 2')
-end)
--- Sends member 1 checked message
-RegisterNetEvent('Fax:m1Message')
-AddEventHandler('Fax:m1Message', function()
-	Wait(5000)
-	ShowInfo('~y~Permission System ~n~~w~Your permission level is: Member 1')
-end)
--- Sends guest checked message
-RegisterNetEvent('Fax:guestMessage')
-AddEventHandler('Fax:guestMessage', function()
-	Wait(5000)
-	ShowInfo('~y~Permission System ~n~~w~Your permission level is: Guest')
-end)
-
--- General No Perms Message
-RegisterNetEvent('Fax-Core:NoPerms')
-AddEventHandler('Fax-Core:NoPerms', function()
-    ShowInfo('~r~Permission System ~n~~w~Insufficient Permissions')
+RegisterNetEvent("sendNotification")
+AddEventHandler("sendNotification", function(string)
+	ShowInfo(string)
 end)
 
 ---- Functions ----
@@ -211,9 +59,4 @@ function ShowInfo(text)
 	SetNotificationTextEntry("STRING")
 	AddTextComponentSubstringPlayerName(text)
 	DrawNotification(false, false)
-end
-
--- Delete Entity
-function DeleteE(entity)
-	Citizen.InvokeNative(0xAE3CBE5BF394C9C9, Citizen.PointerValueIntInitialized(entity))
 end
