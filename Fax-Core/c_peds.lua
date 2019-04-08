@@ -14,7 +14,7 @@ function ManageRestrictPeds()
 				while not HasModelLoaded(newModel) do
 					Citizen.Wait(0)
 				end
-				SetPlayerstModel(PlayerId(), newModel)
+				SetPlayerModel(PlayerId(), newModel)
 				SetModelAsNoLongerNeeded(newModel)
 				ShowInfo("~r~Restricted Ped Model.")
 				print("(WARNING) Attempted to spawn restricted staff player model.")
@@ -30,7 +30,7 @@ function ManageRestrictPeds()
 				while not HasModelLoaded(newModel) do
 					Citizen.Wait(0)
 				end
-				SetPlayerstModel(PlayerId(), newModel)
+				SetPlayerModel(PlayerId(), newModel)
 				SetModelAsNoLongerNeeded(newModel)
 				ShowInfo("~r~Restricted Ped Model.")
 				print("(WARNING) Attempted to spawn restricted player model.")
@@ -46,7 +46,7 @@ function ManageRestrictPeds()
 				while not HasModelLoaded(newModel) do
 					Citizen.Wait(0)
 				end
-				SetPlayerstModel(PlayerId(), newModel)
+				SetPlayerModel(PlayerId(), newModel)
 				SetModelAsNoLongerNeeded(newModel)
 				ShowInfo("~r~Restricted Ped Model.")
 				print("(WARNING) Attempted to spawn restricted player model.")
@@ -62,7 +62,7 @@ function ManageRestrictPeds()
 				while not HasModelLoaded(newModel) do
 					Citizen.Wait(0)
 				end
-				SetPlayerstModel(PlayerId(), newModel)
+				SetPlayerModel(PlayerId(), newModel)
 				SetModelAsNoLongerNeeded(newModel)
 				ShowInfo("~r~Restricted Ped Model.")
 				print("(WARNING) Attempted to spawn restricted player model.")
@@ -78,7 +78,7 @@ function ManageRestrictPeds()
 				while not HasModelLoaded(newModel) do
 					Citizen.Wait(0)
 				end
-				SetPlayerstModel(PlayerId(), newModel)
+				SetPlayerModel(PlayerId(), newModel)
 				SetModelAsNoLongerNeeded(newModel)
 				ShowInfo("~r~Restricted Ped Model.")
 				print("(WARNING) Attempted to spawn restricted player model.")
