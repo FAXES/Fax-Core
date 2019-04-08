@@ -6,7 +6,7 @@ function ManageRestrictWeaps()
 	local ped_l = GetPlayerPed(-1)
 
         if curAuthLvlRank < authLvlRank["Owner"] then
-            for i = 1, #restrictedWeapsGen, 1 do
+            for i = 1, #restrictedWeapsGen do
                 local rweap = GetHashKey(restrictedWeapsGen[i])
                 if HasPedGotWeapon(ped_l, rweap, false) then
                     RemoveWeaponFromPed(ped_l, rweap)
@@ -21,7 +21,7 @@ function ManageRestrictWeaps()
         end
 
 		if curAuthLvlRank < authLvlRank["M3"] then
-			for i = 1, #restrictedWeapsM3, 1 do
+			for i = 1, #restrictedWeapsM3 do
 				local rweap = GetHashKey(restrictedWeapsM3[i])
 				if HasPedGotWeapon(ped_l, rweap, false) then
                     RemoveWeaponFromPed(ped_l, rweap)
@@ -36,7 +36,7 @@ function ManageRestrictWeaps()
 		end	
 
 		if curAuthLvlRank < authLvlRank["M1"] then
-			for i = 1, #restrictedWeapsM1, 1 do
+			for i = 1, #restrictedWeapsM1 do
 				local rweap = GetHashKey(restrictedWeapsM1[i])
 				if HasPedGotWeapon(ped_l, rweap, false) then
                     RemoveWeaponFromPed(ped_l, rweap)
