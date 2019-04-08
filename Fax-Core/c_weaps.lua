@@ -7,14 +7,14 @@ function ManageRestrictWeaps()
 
         if curAuthLvlRank < authLvlRank["Owner"] then
             for i = 1, #restrictedWeapsGen do
-                local rweap = GetHashKey(restrictedWeapsGen[i])
+                local restrictedWeap = GetHashKey(restrictedWeapsGen[i])
                 if HasPedGotWeapon(ped_l, rweap, false) then
-                    RemoveWeaponFromPed(ped_l, rweap)
+                    RemoveWeaponFromPed(ped_l, restrictedWeap)
                     ShowInfo("~r~Restricted Weapon Model.")
                 end
-                local temp, cweap = GetCurrentPedWeapon(ped_l, true)
-                if GetWeaponDamageType(cweap) == 5 then
-                    RemoveWeaponFromPed(ped_l, cweap)
+                local temp, currentWeap = GetCurrentPedWeapon(ped_l, true)
+                if GetWeaponDamageType(currentWeap) == 5 then
+                    RemoveWeaponFromPed(ped_l, currentWeap)
                     ShowInfo("~r~Restricted Weapon Model.")
                 end
             end	
@@ -22,14 +22,14 @@ function ManageRestrictWeaps()
 
 		if curAuthLvlRank < authLvlRank["M3"] then
 			for i = 1, #restrictedWeapsM3 do
-				local rweap = GetHashKey(restrictedWeapsM3[i])
+				local restrictedWeap = GetHashKey(restrictedWeapsM3[i])
 				if HasPedGotWeapon(ped_l, rweap, false) then
-                    RemoveWeaponFromPed(ped_l, rweap)
+                    RemoveWeaponFromPed(ped_l, restrictedWeap)
                     ShowInfo("~r~Restricted Weapon Model.")
 				end
-				local temp, cweap = GetCurrentPedWeapon(ped_l, true)
-				if GetWeaponDamageType(cweap) == 5 then
-                    RemoveWeaponFromPed(ped_l, cweap)
+				local temp, currentWeap = GetCurrentPedWeapon(ped_l, true)
+				if GetWeaponDamageType(currentWeap) == 5 then
+                    RemoveWeaponFromPed(ped_l, currentWeap)
                     ShowInfo("~r~Restricted Weapon Model.")
 				end
 			end
@@ -37,14 +37,14 @@ function ManageRestrictWeaps()
 
 		if curAuthLvlRank < authLvlRank["M1"] then
 			for i = 1, #restrictedWeapsM1 do
-				local rweap = GetHashKey(restrictedWeapsM1[i])
+				local restrictedWeap = GetHashKey(restrictedWeapsM1[i])
 				if HasPedGotWeapon(ped_l, rweap, false) then
-                    RemoveWeaponFromPed(ped_l, rweap)
+                    RemoveWeaponFromPed(ped_l, restrictedWeap)
                     ShowInfo("~r~Restricted Weapon Model.")
 				end
-				local temp, cweap = GetCurrentPedWeapon(ped_l, true)
-				if GetWeaponDamageType(cweap) == 5 then
-                    RemoveWeaponFromPed(ped_l, cweap)
+				local temp, currentWeap = GetCurrentPedWeapon(ped_l, true)
+				if GetWeaponDamageType(currentWeap) == 5 then
+                    RemoveWeaponFromPed(ped_l, currentWeap)
                     ShowInfo("~r~Restricted Weapon Model.")
 				end
 			end
