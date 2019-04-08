@@ -39,8 +39,8 @@ function ManageRestrictVehicles()
 
 			if curAuthLvlRank < authLvlRank["Owner"] then
 				for i = 1, #restrictedVehsGen do
-					local rmodel1 = GetHashKey(restrictedVehsGen[i])
-					if (model == rmodel1) or (GetVehicleClass(veh) == 19) then -- Military
+					local restrictedModel = GetHashKey(restrictedVehsGen[i])
+					if (model == restrictedModel) or (GetVehicleClass(veh) == 19) then -- Military
 						ShowInfo("~r~Restricted Vehicle Model.")
 						DeleteEntity(veh)
 						ClearPedTasksImmediately(ped)
@@ -50,8 +50,8 @@ function ManageRestrictVehicles()
 
 			if curAuthLvlRank < authLvlRank["Sadmin"] then
 				for i = 1, #restrictedVehsSnrAdmin do
-					local rmodel2 = GetHashKey(restrictedVehsSnrAdmin[i])
-					if model == rmodel2 then
+					local restrictedModel = GetHashKey(restrictedVehsSnrAdmin[i])
+					if model == restrictedModel then
 						ShowInfo("~r~Restricted Vehicle Model.")
 						ClearPedTasksImmediately(ped)
 					end
@@ -60,8 +60,8 @@ function ManageRestrictVehicles()
 
 			if curAuthLvlRank < authLvlRank["Admin"] then
 				for i = 1, #restrictedVehsAdmin do
-					local rmodel2 = GetHashKey(restrictedVehsAdmin[i])
-					if model == rmodel2 then
+					local restrictedModel = GetHashKey(restrictedVehsAdmin[i])
+					if model == restrictedModel then
 						ShowInfo("~r~Restricted Vehicle Model.")
 						ClearPedTasksImmediately(ped)
 					end
@@ -70,8 +70,8 @@ function ManageRestrictVehicles()
 
 			if curAuthLvlRank < authLvlRank["M3"] then 
 				for i = 1, #restrictedVehsM3 do
-					local rmodel3 = GetHashKey(restrictedVehsM3[i])
-					if model == rmodel3 then
+					local restrictedModel = GetHashKey(restrictedVehsM3[i])
+					if model == restrictedModel then
 						ShowInfo("~r~Restricted Vehicle Model.")
 						ClearPedTasksImmediately(ped)
 					end
@@ -80,8 +80,8 @@ function ManageRestrictVehicles()
 
 			if curAuthLvlRank < authLvlRank["M2"] then
 				for i = 1, #restrictedVehsM2 do
-					local rmodel4 = GetHashKey(restrictedVehsM2[i])
-					if model == rmodel4 then
+					local restrictedModel = GetHashKey(restrictedVehsM2[i])
+					if model == restrictedModel then
 						ShowInfo("~r~Restricted Vehicle Model.")
 						ClearPedTasksImmediately(ped)	
 					end
@@ -89,14 +89,10 @@ function ManageRestrictVehicles()
 			end
 
 			if curAuthLvlRank < authLvlRank["M1"] then 
-				if GetVehicleClass(veh) == 7 then -- Motorbikes 
+				if GetVehicleClass(veh) == 7 or GetVehicleClass(veh) == 15 or GetVehicleClass(veh) == 16 then -- Motorbikes 
 					ShowInfo("~r~Restricted Vehicle Model.")
 					ClearPedTasksImmediately(ped)
 				end
-				if GetVehicleClass(veh) == 15 or GetVehicleClass(veh) == 16 then -- Planes / Heli's
-					ShowInfo("~r~Restricted Vehicle Model.")
-					ClearPedTasksImmediately(ped)
-				end	
 			end		
 		end
 	end
