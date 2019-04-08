@@ -36,7 +36,7 @@ AddEventHandler('Fax:owner', function()
 	while true do
 
 		local Faxplayer = PlayerId()
-		local Faxped = GetPlayerPed(-1)
+		local Faxped = PlayerPedId()
 		if DoesEntityExist(Faxped) and not IsEntityDead(Faxped) then
 		curAuthLvlRank = authLvlRank["Owner"]
 

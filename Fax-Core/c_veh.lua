@@ -16,7 +16,7 @@ end
 
 -- Manage Restricted Vehicles
 function ManageRestrictVehicles()
-	local Faxped = GetPlayerPed(-1)
+	local Faxped = PlayerPedId()
 	local veh = nil
 
 	if IsPedInAnyVehicle(Faxped, false) then
