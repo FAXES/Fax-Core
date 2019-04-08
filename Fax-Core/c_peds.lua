@@ -12,7 +12,7 @@ function ManageRestrictPeds()
 			if plymodel == rstmodel then
 				RequestModel(newdmodel)
 				while not HasModelLoaded(newdmodel) do
-					Citizen.Wait(400)
+					Citizen.Wait(0)
 				end
 				SetPlayerstModel(PlayerId(), newdmodel)
 				SetModelAsNoLongerNeeded(newdmodel)
@@ -27,7 +27,7 @@ function ManageRestrictPeds()
 			if plymodel == rstmodel then
 				RequestModel(newdmodel)
 				while not HasModelLoaded(newdmodel) do
-					Citizen.Wait(400)
+					Citizen.Wait(0)
 				end
 				SetPlayerstModel(PlayerId(), newdmodel)
 				SetModelAsNoLongerNeeded(newdmodel)
@@ -43,7 +43,7 @@ function ManageRestrictPeds()
 			if plymodel == rstmodel then
 				RequestModel(newdmodel)
 				while not HasModelLoaded(newdmodel) do
-					Citizen.Wait(400)
+					Citizen.Wait(0)
 				end
 				SetPlayerstModel(PlayerId(), newdmodel)
 				SetModelAsNoLongerNeeded(newdmodel)
@@ -59,7 +59,7 @@ function ManageRestrictPeds()
 			if plymodel == rstmodel then
 				RequestModel(newdmodel)
 				while not HasModelLoaded(newdmodel) do
-					Citizen.Wait(400)
+					Citizen.Wait(0)
 				end
 				SetPlayerstModel(PlayerId(), newdmodel)
 				SetModelAsNoLongerNeeded(newdmodel)
@@ -75,7 +75,7 @@ function ManageRestrictPeds()
 			if plymodel == rstmodel then
 				RequestModel(newdmodel)
 				while not HasModelLoaded(newdmodel) do
-					Citizen.Wait(400)
+					Citizen.Wait(0)
 				end
 				SetPlayerstModel(PlayerId(), newdmodel)
 				SetModelAsNoLongerNeeded(newdmodel)
