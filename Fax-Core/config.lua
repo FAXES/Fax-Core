@@ -205,7 +205,7 @@ restrictedWeapsM1 =
 	PED MODEL SECTION
 ]]
 -- Switches back to the below ped when a user is in a blacklisted one.
-newdmodel = GetHashKey("a_m_y_hipster_01")
+newModel = GetHashKey("a_m_y_hipster_01")
 
 -- Set staff / admin peds. These are blacklisted. Use /oda to go on duty as an admin.
 restrictedPedsStaff =
