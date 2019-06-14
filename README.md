@@ -65,5 +65,5 @@ FiveM Server :D
 Credit to @Xander and @Scammer for scripting @Demonen for helping with the ped blacklist
 
 
-**Further [Support](https://discord.gg/R9Z7npM)**
+**Further [Support](https://faxes.zone/discord)**
 If you have any issues, comments or suggestions please put them below. :mascot:
