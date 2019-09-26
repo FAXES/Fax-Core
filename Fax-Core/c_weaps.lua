@@ -38,7 +38,7 @@ function ManageRestrictWeaps()
 		if curAuthLvlRank < authLvlRank["M1"] then
 			for i = 1, #restrictedWeapsM1 do
 				local restrictedWeap = GetHashKey(restrictedWeapsM1[i])
-				if HasPedGotWeapon(ped_l, rweap, false) then
+				if HasPedGotWeapon(ped_l, restrictedWeap, false) then
                     RemoveWeaponFromPed(ped_l, restrictedWeap)
                     ShowInfo("~r~Restricted Weapon Model.")
 				end
